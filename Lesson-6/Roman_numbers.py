@@ -41,6 +41,10 @@ def to_roman(n):
     print()
 
 
-
-n = int(input())
-to_roman(n)
+while True:
+    n = int(input('Enter natural number: '))
+    if 0 < n < 4000:
+        to_roman(n)
+        break
+    else:
+        print('An error occurred')

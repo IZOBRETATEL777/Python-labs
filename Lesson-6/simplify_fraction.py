@@ -16,6 +16,12 @@ def simplify(a, b):
     return a // d, b // d
 
 
-a, b = map(int, input().split())
-a, b = simplify(a, b)
-print(a, b)
+a, b = map(int, input('Enter the numerator and denumerator of a fraction in one line:\n').split())
+if a == 0:
+    print('Answer is 0/1 or 0. Are you not mistaken?')
+elif b == 0:
+    print('It is impossible to devide by 0!')
+else:
+    a, b = simplify(a, b)
+    print(f'Simplified fraction: {a}/{b}')
+

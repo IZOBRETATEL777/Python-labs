@@ -5,5 +5,5 @@ def sort_three(a1, a2, a3):
     return a1, a2, a3
 
 
-a, b, c = map(int, input().split())
-print(*sort_three(a, b, c), sep=' ')
+a, b, c = map(int, input('Enter three integers in one line:\n').split())
+print('Sorted:', *sort_three(a, b, c), sep=' ')

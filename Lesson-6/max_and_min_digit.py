@@ -1,4 +1,7 @@
 def extr_digits(n):
+    n = abs(n)
+    if n == 0:
+        return 0, 0
     mx = -1
     mn = 10
     while n > 0:
@@ -8,6 +11,6 @@ def extr_digits(n):
     return mx, mn
 
 
-n = int(input())
+n = int(input('Enter an integer: '))
 mx, mn = extr_digits(n)
-print(mx, mn)
+print(f'Max digit is {mx}\nMin digit is {mn}')

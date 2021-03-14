@@ -5,5 +5,10 @@ def my_factorial(n):
     return res
 
 
-n = int(input())
-print(my_factorial(n))
+while True:
+    n = int(input('Enter a natural number '))
+    if n > 0:
+        print('The factorial of the given number is:\n', my_factorial(n), sep='')
+        break
+    else:
+        print('Try again')
