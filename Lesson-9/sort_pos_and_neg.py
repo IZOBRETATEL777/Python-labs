@@ -1,9 +1,19 @@
-n = int(input())
-a = [int(x) for x in input().split()]
-#bubble sort implementation
-for i in range(n - 1):
-    for j in range(0, n - i - 1):
-        if a[j] <= 0 and a[j + 1] >= 0:
-            a[j], a[j + 1] = a[j + 1], a[j]
+from random import randint
+
+
+n = 20
+a = [randint(-100, 100) for _ in range(n)]
+print('Массив:')
 print(*a, sep=' ')
+neg = []
+zero = 0
+pos = []
+for i in a:
+    if i < 0:
+        neg.append(i)
+    if i == 0:
+        zero += 1
+    if i > 0:
+        pos.append(i)
+print(*neg, *([0] * zero), *pos, sep=' ')
 
