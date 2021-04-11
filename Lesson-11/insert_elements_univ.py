@@ -19,8 +19,10 @@ def getIdx(idx, idxTable):
 n = 20
 a = [randint(1, 100) for _ in range(n)]
 idxTable = [i for i in range(n)]
+print('Array:')
 print(*a, sep=' ')
-for _ in range(2):
+for _ in range(2):#range can be changed
+    print('Enter an index and value to insert in one line:')
     idx, val = map(int, input().split())
     idx = getIdx(idx, idxTable)
     if idx == -1:
@@ -28,6 +30,7 @@ for _ in range(2):
         continue
     a = ins(idx, val, a)
     idxTable = ins(idx, -1, idxTable)
-    print(*a, sep=' ')
+print('Inserted!')
+print(*a, sep=' ')
 
 

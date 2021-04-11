@@ -7,8 +7,10 @@ def bubble(a, n, cur=0):
     return bubble(a, n, cur + 1)
 
 
-n = int(input())
+n = int(input("Enter size: "))
+print('Enter array in one line:')
 a = [int(i) for i in input().split()]
+print('Sorted array:')
 a = bubble(a, n)
 print(*a, sep=' ')
 
