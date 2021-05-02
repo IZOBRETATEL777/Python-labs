@@ -1,7 +1,7 @@
 s = input('Enter a word:\n')
-res = (s[0].isalpha() or s[0] == '_')
+res = (ord('A') <= ord(s[0]) <= ord('Z') or ord('a') <= ord(s[0]) <= ord('z') or s[0] == '_')
 for i in s:
-    res &= (i.isalpha() or i.isdigit() or i == '_')
+    res &= (ord('A') <= ord(s[0]) <= ord('Z') or ord('a') <= ord(s[0]) <= ord('z') or i.isdigit() or i == '_')
 if res:
     print('It is an identificator')
 else:
